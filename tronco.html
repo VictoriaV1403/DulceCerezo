@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheesecake BlueBerry</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilos/estilo-descripcion.css">
+</head>
+<body class="body">
+    <div class="container mt-5 mb-5">
+        <br><br><br>
+    <div class="card mb-3 bg-transparent bordercard">
+      <div class="row no-gutters h-100 card-horizontal ">
+        <div class="col-lg-5 fondo ">
+          <img src="assets/images/descripcion/tronco.png" class="img-fluid  card-img-left card-img-top" alt="...">
+        </div>
+        <div class="col-lg-7 fondo">
+          <div class="card-body">
+            <br>
+            <h2 class="card-title">Tronco Navideño</h2>
+            <h2 class="card-price">$298.00</h2>
+            <p class="card-text">Tronco navideño de chocolate relleno de crema con sabor a chocolate. Decorado con un diseño temático de la temporada.</p>
+            <p class="card-text">Tamaño ideal para 8 personas.</p>
+            <div class="d-flex justify-content-start align-items-center"> 
+                <button class="btn btn-outline-danger cantidad-borde cantidad" id="decrease-btn">-</button>
+                <input type="text" class="form-control text-center quantity-input" value="1" id="quantity-input" style="width: 70px;">
+                <button class="btn btn-outline-danger cantidad-borde cantidad" id="increase-btn">+</button>
+                
+                <!--Botón de Carrito-->
+                <button type="button" class="btn btn-danger btn-md ms-3" style="width: auto; border-radius: 5px;" data-bs-toggle="modal"
+                        data-bs-target="#modalFresas">
+                        Agregar
+                        <img src="assets/icon/cart-fill.svg" class="invert-color" width="24" height="24" alt="">
+                </button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+
+
+    <script>
+        const decreaseBtn = document.getElementById('decrease-btn');
+        const increaseBtn = document.getElementById('increase-btn');
+        const quantityInput = document.getElementById('quantity-input');
+    
+        decreaseBtn.addEventListener('click', () => {
+          let value = parseInt(quantityInput.value) || 0;
+          if (value > 1) {
+            quantityInput.value = value - 1;
+          }
+        });
+    
+        increaseBtn.addEventListener('click', () => {
+          let value = parseInt(quantityInput.value) || 0;
+          quantityInput.value = value + 1;
+        });
+      </script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

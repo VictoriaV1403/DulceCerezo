@@ -1,0 +1,37 @@
+.footer {
+    background-color: #400202;
+    padding: 30px 0;
+}
+
+.footer h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.footer p,
+.footer a {
+    color: #ffffff;
+    font-size: 1rem;
+    text-decoration: none;
+    /* Eliminar subrayado */
+}
+
+.footer a:hover {
+    color: #007bff;
+    text-decoration: none;
+    /* Mantener sin subrayado al hacer hover */
+}
+
+.iconosredes {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: #ffffff;
+}
+
+.color-footer {
+    color: #ffffff;
+}
+
+.iconosredes:hover {
+    color: #cf6d6d;
+}

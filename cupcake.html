@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cupcakes</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="estilos/estilo-pasteles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    /* Estilo para la barra de navegación */
+    .navbar-custom {
+      background-color: #5D0000;
+      padding: 15px 0;
+    }
+
+    .navbar-custom .navbar-brand,
+    .navbar-custom .navbar-nav .nav-link {
+      color: white;
+      font-size: 18px;
+    }
+
+    .navbar-custom .navbar-nav .nav-link:hover {
+      color: #f8f9fa;
+    }
+
+    .navbar-nav {
+      flex-direction: row;
+    }
+
+    .navbar-custom .navbar-nav .nav-item {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .navbar-custom .navbar-brand {
+      margin-left: 10px;
+    }
+
+    .navbar-custom .navbar-nav .nav-item:last-child {
+      margin-left: auto;
+    }
+
+    .navbar-custom .navbar-nav .nav-item i {
+      font-size: 1.8rem;
+    }
+
+    .button-container {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .btn-custom {
+      background-color: #5D0000;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+
+    /* Menú vertical en pantallas pequeñas */
+    @media (max-width: 767px) {
+      .navbar-nav {
+        display: block;
+        text-align: left;
+        /* Alineado a la izquierda */
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .navbar-nav .nav-item {
+        padding: 10px 0;
+        font-size: 16px;
+        border-top: none;
+        /* Eliminar líneas de separación */
+      }
+
+      /* Menú colapsado */
+      .navbar-collapse {
+        text-align: center;
+        width: 100%;
+      }
+
+      /* Estilo para el botón de hamburguesa */
+      .navbar-toggler {
+        border-color: #5D0000;
+      }
+
+      .navbar-toggler-icon {
+        background-color: #5D0000;
+      }
+
+      /* Alineación a la derecha para los íconos en pantallas pequeñas */
+      .navbar-nav .nav-item.icon-item {
+        margin-left: auto;
+      }
+    }
+
+    /* Asegurar que los iconos estén alineados a la derecha en pantallas grandes */
+    .navbar-custom .navbar-nav .nav-item.icon-item {
+      margin-left: auto;
+    }
+  </style>
+</head>
+
+
+
+<body class="body">
+  <nav class="navbar navbar-expand-md navbar-custom fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="inicio.html">
+        <img src="assets/images/logo_cerezo.png" alt="Logotipo" width="100" height="70">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto"> <!-- Cambiado de ms-auto a me-auto -->
+          <li class="nav-item">
+            <a class="nav-link text-white" href="articulosdeco.html">Decoración</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="nosotros.html">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="nuestrosproductos.html">Ofertas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="pasteles.html">Pateles</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="cupcake.html">Cupcakes</a>
+          </li>
+
+        </ul>
+
+        <!-- Íconos de usuario y carrito -->
+        <ul class="navbar-nav">
+          <li class="nav-item icon-item">
+            <a class="nav-link text-white" href="usuario.html" aria-label="Usuario">
+              <i class="bi bi-person-fill"></i>
+            </a>
+          </li>
+          <li class="nav-item icon-item">
+            <a class="nav-link text-white" href="carrito.html" aria-label="Carrito">
+              <i class="bi bi-cart-fill"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <br><br><br><br><br>
+  <div class="container mt-5 ">
+    <br><br>
+
+    <h1 class="text-center fuenteProductos mt-5" id="cards">Cupcakes</h1>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-3 mb-3">
+
+      <div class="col col-md-12 col-lg-4 ">
+        <div class="card h-100 d-flex flex-column bg-transparent bordercard">
+          <img src="assets/images/cupcakes/chocolate.png" class="card-img-top img-fluid custom-img" alt="...">
+          <div class="card-body d-flex flex-column align-items-center">
+            <h5 class="card-title">Chocolate</h5>
+            <div class="d-flex justify-content-center align-items-center gap-3 mt-3">
+              <h1 class="card-text mb-3 fw-bold" >$380.00</h1>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="col col-md-12 col-lg-4 ">
+        <div class="card h-100 d-flex flex-column bg-transparent bordercard">
+          <img src="assets/images/cupcakes/babano.webp" class="card-img-top img-fluid" alt="...">
+          <div class="card-body d-flex flex-column align-items-center">
+            <h5 class="card-title">Banano</h5>
+            <div class="d-flex justify-content-center align-items-center gap-3 mt-3">
+              <h1 class="card-text mb-3 fw-bold" >$50.00</h1>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col-md-12 col-lg-4 ">
+        <div class="card h-100 d-flex flex-column bg-transparent bordercard">
+          <img src="assets/images/cupcakes/cafe.jpg" class="card-img-top" alt="...">
+          <div class="card-body d-flex flex-column align-items-center">
+            <h5 class="card-title">Café</h5>
+            <div class="d-flex justify-content-center align-items-center gap-3 mt-3">
+              <h1 class="card-text mb-3 fw-bold" >$360.00</h1>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- tarjetas de prueba -->
+      <div class="col col-md-12 col-lg-4 ">
+        <div class="card h-100 d-flex flex-column bg-transparent bordercard">
+          <img src="assets/images/cupcakes/cupdulceleche.jpg" class="card-img-top" alt="...">
+          <div class="card-body d-flex flex-column align-items-center">
+            <h5 class="card-title">Dulce de leche</h5>
+            <div class="d-flex justify-content-center align-items-center gap-3 mt-3">
+              <h1 class="card-text mb-3 fw-bold" >$450.00</h1>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col col-md-12 col-lg-4 ">
+        <div class="card h-100 d-flex flex-column bg-transparent bordercard">
+          <img src="assets/images/cupcakes/cupferrero.avif" class="card-img-top" alt="...">
+          <div class="card-body d-flex flex-column align-items-center">
+            <h5 class="card-title">Ferrero</h5>
+            <div class="d-flex justify-content-center align-items-center gap-3 mt-3">
+              <h1 class="card-text mb-3 fw-bold" >$580.00</h1>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col col-md-12 col-lg-4 ">
+        <div class="card h-100 d-flex flex-column bg-transparent bordercard">
+          <img src="assets/images/cupcakes/fresascrema.webp" class="card-img-top" alt="...">
+          <div class="card-body d-flex flex-column align-items-center">
+            <h5 class="card-title">Fresas con crema</h5>
+            <div class="d-flex justify-content-center align-items-center gap-3 mt-3">
+              <h1 class="card-text mb-3 fw-bold" >$375</h1>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col col-md-12 col-lg-4 ">
+        <div class="card h-100 d-flex flex-column bg-transparent bordercard">
+          <img src="assets/images/cupcakes/cupfrutos.jpg" class="card-img-top" alt="...">
+          <div class="card-body d-flex flex-column align-items-center">
+            <h5 class="card-title">Frutos</h5>
+            <div class="d-flex justify-content-center align-items-center gap-3 mt-3">
+              <h1 class="card-text mb-3 fw-bold" >$46.00</h1>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col col-md-12 col-lg-4 ">
+        <div class="card h-100 d-flex flex-column bg-transparent bordercard">
+          <img src="assets/images/cupcakes/limon.jpg" class="card-img-top" alt="...">
+          <div class="card-body d-flex flex-column align-items-center">
+            <h5 class="card-title">Pay de limón</h5>
+            <div class="d-flex justify-content-center align-items-center gap-3 mt-3">
+              <h1 class="card-text mb-3 fw-bold" >$325.00</h1>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col col-md-12 col-lg-4 ">
+        <div class="card h-100 d-flex flex-column bg-transparent bordercard">
+          <img src="assets/images/cupcakes/cuporeo.jpg" class="card-img-top" alt="...">
+          <div class="card-body d-flex flex-column align-items-center">
+            <h5 class="card-title">Oreo</h5>
+            <div class="d-flex justify-content-center align-items-center gap-3 mt-3">
+              <h1 class="card-text mb-3 fw-bold" >$360.00</h1>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      
+
+      <div class="col col-md-12 col-lg-4 ">
+        <div class="card h-100 d-flex flex-column bg-transparent bordercard">
+          <img src="assets/images/cupcakes/cupredvelvet.jpg" class="card-img-top" alt="...">
+          <div class="card-body d-flex flex-column align-items-center">
+            <h5 class="card-title">Redvelvet</h5>
+            <div class="d-flex justify-content-center align-items-center gap-3 mt-3">
+              <h1 class="card-text mb-3 fw-bold" >$46.00</h1>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col col-md-12 col-lg-4 ">
+        <div class="card h-100 d-flex flex-column bg-transparent bordercard">
+          <img src="assets/images/cupcakes/cupUnicornio.jpg" class="card-img-top" alt="...">
+          <div class="card-body d-flex flex-column align-items-center">
+            <h5 class="card-title">Frutos</h5>
+            <div class="d-flex justify-content-center align-items-center gap-3 mt-3">
+              <h1 class="card-text mb-3 fw-bold" >$46.00</h1>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col col-md-12 col-lg-4 ">
+        <div class="card h-100 d-flex flex-column bg-transparent bordercard">
+          <img src="assets/images/cupcakes/cupvainilla.png" class="card-img-top" alt="...">
+          <div class="card-body d-flex flex-column align-items-center">
+            <h5 class="card-title">Vainilla</h5>
+            <div class="d-flex justify-content-center align-items-center gap-3 mt-3">
+              <h1 class="card-text mb-3 fw-bold" >$46.00</h1>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    
+    <div>
+            <h1 class="text-center fuenteProductos mt-5" id="cards">Cupcakes de temporada</h1>  
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-3 mb-3">
+
+        <div class="col col-md-12 col-lg-4 ">
+          <div class="card h-100 d-flex flex-column bg-transparent bordercard">
+            <img src="assets/images/cupcakes/grinch.jpg" class="card-img-top" alt="...">
+            <div class="card-body d-flex flex-column align-items-center">
+              <h5 class="card-title">Cupcake Grinch</h5>
+              <div class="d-flex justify-content-center align-items-center gap-3 mt-3">
+                <h1 class="card-text mb-3 fw-bold" >$40.00</h1>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="col col-md-12 col-lg-4 ">
+          <div class="card h-100 d-flex flex-column bg-transparent bordercard">
+            <img src="assets/images/cupcakes/arbol.jpg" class="card-img-top" alt="...">
+            <div class="card-body d-flex flex-column align-items-center">
+              <h5 class="card-title">Cupcake árbol de navidad</h5>
+              <div class="d-flex justify-content-center align-items-center gap-3 mt-3">
+                <h1 class="card-text mb-3 fw-bold" >$45.00</h1>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col col-md-12 col-lg-4 ">
+          <div class="card h-100 d-flex flex-column bg-transparent bordercard">
+            <img src="assets/images/cupcakes/jengibre.jpg" class="card-img-top" alt="...">
+            <div class="card-body d-flex flex-column align-items-center">
+              <h5 class="card-title">Cupcake de Jengibre</h5>
+              <div class="d-flex justify-content-center align-items-center gap-3 mt-3">
+                <h1 class="card-text mb-3 fw-bold" >$50.00</h1>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col col-md-12 col-lg-4 ">
+          <div class="card h-100 d-flex flex-column bg-transparent bordercard">
+            <img src="assets/images/cupcakes/surtido.jpg" class="card-img-top" alt="...">
+            <div class="card-body d-flex flex-column align-items-center">
+              <h5 class="card-title">Surtido cupcakes 12pz</h5>
+              <div class="d-flex justify-content-center align-items-center gap-3 mt-3">
+                <h1 class="card-text mb-3 fw-bold" >$450.00</h1>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col col-md-12 col-lg-4 ">
+          <div class="card h-100 d-flex flex-column bg-transparent bordercard">
+            <img src="assets/images/cupcakes/merrychrismas.jpg" class="card-img-top" alt="...">
+            <div class="card-body d-flex flex-column align-items-center">
+              <h5 class="card-title">Paquete Merry Christmas 4pz</h5>
+              <div class="d-flex justify-content-center align-items-center gap-3 mt-3">
+                <h1 class="card-text mb-3 fw-bold" >$99</h1>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col col-md-12 col-lg-4 ">
+          <div class="card h-100 d-flex flex-column bg-transparent bordercard">
+            <img src="assets/images/cupcakes/santa.jpg" class="card-img-top" alt="...">
+            <div class="card-body d-flex flex-column align-items-center">
+              <h5 class="card-title">Paquete Santa 7pz</h5>
+              <div class="d-flex justify-content-center align-items-center gap-3 mt-3">
+                <h1 class="card-text mb-3 fw-bold" >$320.00</h1>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+  </div>
+
+
+ 
+
+
+  
+  
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

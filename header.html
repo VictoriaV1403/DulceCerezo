@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dulce Cerezo - Menú</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        /* Estilo para la barra de navegación */
+        .navbar-custom {
+            background-color: #5D0000;
+            padding: 15px 0;
+        }
+
+        .navbar-custom .navbar-brand,
+        .navbar-custom .navbar-nav .nav-link {
+            color: white;
+            font-size: 18px;
+        }
+
+        .navbar-custom .navbar-nav .nav-link:hover {
+            color: #f8f9fa;
+        }
+
+        .navbar-nav {
+            flex-direction: row;
+        }
+
+        .navbar-custom .navbar-nav .nav-item {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .navbar-custom .navbar-brand {
+            margin-left: 10px;
+        }
+
+        .navbar-custom .navbar-nav .nav-item:last-child {
+            margin-left: auto;
+        }
+
+        .navbar-custom .navbar-nav .nav-item i {
+            font-size: 1.8rem;
+        }
+
+        .button-container {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .btn-custom {
+            background-color: #5D0000;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        /* Menú vertical en pantallas pequeñas */
+        @media (max-width: 767px) {
+            .navbar-nav {
+                display: block;
+                text-align: left;
+                /* Alineado a la izquierda */
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .navbar-nav .nav-item {
+                padding: 10px 0;
+                font-size: 16px;
+                border-top: none;
+                /* Eliminar líneas de separación */
+            }
+
+            /* Menú colapsado */
+            .navbar-collapse {
+                text-align: center;
+                width: 100%;
+            }
+
+            /* Estilo para el botón de hamburguesa */
+            .navbar-toggler {
+                border-color: #5D0000;
+            }
+
+            .navbar-toggler-icon {
+                background-color: #5D0000;
+            }
+
+            /* Alineación a la derecha para los íconos en pantallas pequeñas */
+            .navbar-nav .nav-item.icon-item {
+                margin-left: auto;
+            }
+        }
+
+        /* Asegurar que los iconos estén alineados a la derecha en pantallas grandes */
+        .navbar-custom .navbar-nav .nav-item.icon-item {
+            margin-left: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-md navbar-custom fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="inicio.php">
+                <img src="assets/images/logo_cerezo.png" alt="Logotipo" width="100" height="70">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto"> <!-- Cambiado de ms-auto a me-auto -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown1" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Reposteria
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                            <li><a class="dropdown-item" href="pasteles.html">Pasteles</a></li>
+                            <li><a class="dropdown-item" href="cupcake.html">Cupcakes</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="articulosdeco.html">Decoración</a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- <a class="nav-link text-white" href="Ayuda.html">Ayuda</a> -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="nuestrosproductos.html">Ofertas</a>
+                    </li>
+
+                </ul>
+
+                <!-- Íconos de usuario y carrito -->
+                <ul class="navbar-nav">
+                    <li class="nav-item icon-item">
+                        <a class="nav-link text-white" href="usuario.html" aria-label="Usuario">
+                            <i class="bi bi-person-fill"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item icon-item">
+                        <a class="nav-link text-white" href="carrito.html" aria-label="Carrito">
+                            <i class="bi bi-cart-fill"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

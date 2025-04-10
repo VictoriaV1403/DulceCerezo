@@ -1,0 +1,47 @@
+ /* Estilo para la barra de navegación */
+ .navbar-custom {
+    background-color: #5D0000;
+    padding: 10px 0;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+    color: #f8f9fa;
+}
+
+.navbar-nav {
+    flex-direction: row;
+}
+
+.navbar-custom .navbar-nav .nav-item {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Alinear el logo a la izquierda */
+.navbar-custom .navbar-brand {
+    margin-left: 10px;
+}
+
+/* Centrar los íconos del usuario y carrito */
+.navbar-custom .navbar-nav .nav-item:last-child {
+    margin-left: auto;
+}
+
+/* Estilo para los íconos de usuario y carrito */
+.navbar-custom .navbar-nav .nav-item i {
+    font-size: 1.5rem;
+}
+
+/* Espaciado y alineación para los botones */
+.button-container {
+    margin-top: 30px;
+    text-align: center;
+}
+body {
+    padding-top: 80px; /* Ajusta este valor según el tamaño de tu barra de navegación */
+}

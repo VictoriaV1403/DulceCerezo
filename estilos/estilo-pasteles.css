@@ -1,0 +1,66 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fdd7d7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  
+  .card-img-top {
+    object-fit: cover;
+    background-color: #EDC9C9;
+    height: 350px;
+    width: 100%;
+    border-top-left-radius: 15px; /* Redondeo inferior izquierdo */
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px; /* Redondeo inferior izquierdo */
+    border-bottom-right-radius: 15px;
+  }
+  
+  .invert-color {
+    filter: invert(1);
+  }
+  
+  .fuenteProductos {
+    color: #470505;
+    font-weight: bold;
+    font-size: 2.5rem;
+  }
+  .bordercard{
+    border-color: #fdd7d7;
+  }
+  .card-body {
+    object-fit: cover;
+    /*background-color: #EDC9C9;*/
+    flex: 1 1 auto;
+    padding: 10px;
+  }
+  
+  .card-title {
+    font-size: 1.40rem;
+    margin-bottom: 0.75rem;
+    margin-top: 0.60rem;
+    color: #750909;
+    font-weight: 550;
+  }
+  
+  .card-text {
+    font-size: 1.3rem;
+    margin-bottom: .5rem;
+    margin-top: 1rem
+  }
+  
+  .btn {
+    font-size: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btn img {
+    margin-left: 9px;
+  }
+  

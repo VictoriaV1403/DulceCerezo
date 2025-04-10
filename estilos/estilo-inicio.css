@@ -1,0 +1,95 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fdd7d7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*min-height: 100vh;*/
+    margin: 0;
+    color: #470505;
+  }
+  
+  
+  
+  .card-img-top {
+    object-fit: cover;
+    border-radius: 0 !important;
+    background-color: #EDC9C9;
+    height: 350px;
+    width: 100%;
+    
+    
+  }
+  
+  .invert-color {
+    filter: invert(1);
+  }
+  h1:hover {
+    transform: scale(1.1);
+    color: #990000;
+  }
+
+  
+  .fuenteProductos {
+    color: #470505;
+    font-weight: bold;
+    font-size: 2.5rem;
+  }
+  .bordercard{
+    border-color: #fdd7d7;
+    border-radius: 0 !important;
+  }
+  .card-body {
+    object-fit: cover;
+    /*background-color: #EDC9C9;*/
+    flex: 1 1 auto;
+    padding: 10px;
+    border-radius: 0 !important;
+  }
+  
+  .card-title {
+    font-size: 1.40rem;
+    margin-bottom: 0.75rem;
+    margin-top: 0.60rem;
+    color: #750909;
+    font-weight: 550;
+  }
+  
+  .card-text {
+    font-size: 1.3rem;
+    margin-bottom: .5rem;
+    margin-top: 1rem
+  }
+  
+  .btn {
+    font-size: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btn img {
+    margin-left: 9px;
+  }
+  .carousel-inner img {
+    width: 100%;
+    height: auto;
+  }
+  .custom-carousel {
+    width: 100%;
+    height: auto;
+  }
+  
+  .custom-carouselimg {
+    width: 90%; /* Ajusta el ancho al 100% del contenedor */
+    height: 90%; /* Ajusta la altura al 100% del contenedor */
+    object-fit: cover; /* Recorta la imagen para llenar el área */
+  }
+ .card{
+  border-radius: 0 !important;
+ }
+ .carousel-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 50%;
+}

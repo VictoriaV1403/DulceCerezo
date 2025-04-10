@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="estilos/estilo-carrito.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <title>Carrito de Compras</title>
+    <style>
+        /* Estilo para la barra de navegación */
+        .navbar-custom {
+          background-color: #5D0000;
+          padding: 15px 0;
+        }
+    
+        .navbar-custom .navbar-brand,
+        .navbar-custom .navbar-nav .nav-link {
+          color: white;
+          font-size: 18px;
+        }
+    
+        .navbar-custom .navbar-nav .nav-link:hover {
+          color: #f8f9fa;
+        }
+    
+        .navbar-nav {
+          flex-direction: row;
+        }
+    
+        .navbar-custom .navbar-nav .nav-item {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+    
+        .navbar-custom .navbar-brand {
+          margin-left: 10px;
+        }
+    
+        .navbar-custom .navbar-nav .nav-item:last-child {
+          margin-left: auto;
+        }
+    
+        .navbar-custom .navbar-nav .nav-item i {
+          font-size: 1.8rem;
+        }
+    
+        .button-container {
+          margin-top: 30px;
+          text-align: center;
+        }
+    
+        .btn-custom {
+          background-color: #5D0000;
+          border: none;
+          color: white;
+          padding: 10px 20px;
+          font-size: 16px;
+        }
+    
+        /* Menú vertical en pantallas pequeñas */
+        @media (max-width: 767px) {
+          .navbar-nav {
+            display: block;
+            text-align: left;
+            /* Alineado a la izquierda */
+            width: 100%;
+            margin-top: 10px;
+          }
+    
+          .navbar-nav .nav-item {
+            padding: 10px 0;
+            font-size: 16px;
+            border-top: none;
+            /* Eliminar líneas de separación */
+          }
+    
+          /* Menú colapsado */
+          .navbar-collapse {
+            text-align: center;
+            width: 100%;
+          }
+    
+          /* Estilo para el botón de hamburguesa */
+          .navbar-toggler {
+            border-color: #5D0000;
+          }
+    
+          .navbar-toggler-icon {
+            background-color: #5D0000;
+          }
+    
+          /* Alineación a la derecha para los íconos en pantallas pequeñas */
+          .navbar-nav .nav-item.icon-item {
+            margin-left: auto;
+          }
+        }
+    
+        /* Asegurar que los iconos estén alineados a la derecha en pantallas grandes */
+        .navbar-custom .navbar-nav .nav-item.icon-item {
+          margin-left: auto;
+        }
+      </style>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        
+
+
+        <!-- Contenido del carrito -->
+        <div class="container my-5">
+            <h1 class="text">Tu Carrito</h1>
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <table class="table table-striped product-table">
+                        <colgroup>
+                            <col style="width: 50%;"> <!-- Columna Producto -->
+                            <col style="width: 15%;"> <!-- Columna Cantidad -->
+                            <col style="width: 15%;"> <!-- Columna Precio -->
+                            <col style="width: 15%;"> <!-- Columna Total -->
+                            <col style="width: 5%;"> <!-- Columna Eliminar -->
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Cantidad</th>
+                                <th>Precio</th>
+                                <th>Total</th>
+                                <th>Eliminar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="assets/images/inicio/blueberrychess.webp" alt="Producto 1"
+                                        class="product-image">
+                                    Chesscake Blueberry
+                                </td>
+                                <td><input type="number" class="form-control quantity-input" value="1" min="1"
+                                        data-price="200" onchange="updateTotal()"></td>
+                                <td class="p-3">$200</td>
+                                <td class="total-prod p-3">$200</td>
+                                <td><button class="btn btn-blue btn-sm mt-1"
+                                        onclick="removeProduct(this)">Eliminar</button></td>
+                            </tr>
+                            <tr>
+                                <td class="">
+                                    <img src="assets/images/inicio/macarrones.jpg" alt="Producto 2"
+                                        class="product-image">
+                                    Macarrones
+                                </td>
+                                <td><input type="number" class="form-control quantity-input small-input" value="2"
+                                        min="1" data-price="150" onchange="updateTotal()"></td>
+                                <td class="p-3">$150</td>
+                                <td class="total-prod p-3">$300</td>
+                                <td><button class="btn btn-blue btn-sm mt-1"
+                                        onclick="removeProduct(this)">Eliminar</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-8 col-lg-4 mx-auto">
+                    <div class="total-section p-4 ">
+                        <div class="row p-2 price-row">
+                            <span class="label">Subtotal:</span>
+
+                            <span class="price" id="subtotal-price"> $ 500</span>
+
+                        </div>
+                        <div class="row p-2 price-row">
+                            <span class="label">Envío:</span>
+                            <span class="price">$ 200</span>
+
+                        </div>
+                        <div class="separator"></div>
+                        <div class="row p-2 price-row total">
+                            <span class="label">Total: </span>
+
+
+                            <span class="price" id="total-price"> $ 700</span>
+                        </div>
+
+                        <button class="btn btn-danger btn-block" onclick="redireccionar()">Proceder al Pago</button>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+
+        <!-- Scripts -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+            function updateTotal() {
+                let subtotal = 0;
+
+                // Actualiza los totales por producto y acumula el subtotal
+                document.querySelectorAll('.quantity-input').forEach(input => {
+                    const price = parseFloat(input.dataset.price); // Precio base del producto
+                    const quantity = parseInt(input.value); // Cantidad seleccionada
+                    const total = price * quantity; // Total para este producto
+
+                    // Actualiza el total de cada fila, incluyendo el signo de $
+                    input.closest('tr').querySelector('.total-prod').textContent = `$${total}`;
+
+                    subtotal += total; // Suma al subtotal
+                });
+
+                // Actualiza el subtotal y el total general, incluyendo el signo de $
+                document.getElementById("subtotal-price").textContent = `$ ${subtotal}`;
+                document.getElementById("total-price").textContent = `$ ${subtotal + 200}`; // Envió fijo de $200
+            }
+            function removeProduct(button) {
+                button.closest('tr').remove();
+                updateTotal();
+            }
+
+            function redireccionar(){
+                window.location.href = "envio.html";
+            }
+
+        </script>
+
+
+    </div>
+    </div>
+
+</body>
+
+</html>

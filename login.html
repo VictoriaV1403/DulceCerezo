@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Iniciar Sesión</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/estilo-register.css">
+    <style>
+        body {
+            background-color: #e4b5b5;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            max-width: 400px;
+            margin-top: 50px;
+            background-color: rgba(255, 255, 255, 0.575);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        
+        .btn-danger {
+            background-color: #8a0101;
+            border: none;
+        }
+        .btn-danger:hover {
+            background-color: #9b0808;
+        }
+        .btn-secondary {
+            background-color: #cc6666;
+            border: none;
+        }
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+        .form-control {
+            border-radius: 5px;
+        }
+        .separator {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        .form-check-input {
+            margin-left: 0;
+        }
+        h2 {
+            font-weight: bold;
+            color: #750909;
+            text-align: center;
+            font-size: 30px;
+            transition: transform 0.3s, color 0.3s;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+          }
+    </style>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h2 class="text-center">Iniciar Sesión</h2>
+    
+    <form action="login.html" method="post">
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="contraseña">Contraseña:</label>
+            <div class="input-group">
+                <input type="password" class="form-control" id="contraseña" name="contraseña" required>
+            </div>
+        </div>
+        <div class="form-check mb-4">
+            <input type="checkbox" class="form-check-input" id="mostrarContraseña" onclick="togglePassword()">
+            <label class="form-check-label" for="mostrarContraseña"> Mostrar Contraseña</label>
+        </div>
+        <button type="submit" name="submit" class="btn btn-danger btn-block">Iniciar Sesión</button>
+        <div class="separator">¿No tienes cuenta?</div>
+        <a href="register.html" class="btn btn-secondary btn-block">Registrarte</a>
+    </form>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    function togglePassword() {
+        var password = document.getElementById("contraseña");
+        if (password.type === "password") {
+            password.type = "text";
+        } else {
+            password.type = "password";
+        }
+    }
+</script>
+
+</body>
+</html>

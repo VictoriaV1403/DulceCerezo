@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <!-- Estilos personalizados -->
+    <style>
+        body {
+            background: linear-gradient(to right, #d69393, #f2c2c2);
+            font-family: 'Arial', sans-serif;
+        }
+
+        .header-bar {
+            background-color: #720707;
+            padding: 15px 20px;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .header-bar .arrow {
+            font-size: 1.5rem;
+            color: white;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        .header-bar .arrow:hover {
+            color: #cf7e78;
+        }
+
+        .container {
+            margin-top: 50px;
+            background-color: rgba(255, 255, 255, 0.63);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .user-info {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .user-icon {
+            font-size: 6rem;
+            color: #860c0c;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .user-icon:hover {
+            transform: rotate(360deg) scale(1.1);
+        }
+
+        .user-info h2 {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #990000;
+        }
+
+        .user-info p {
+            font-size: 1.1rem;
+            color: #444;
+            margin: 8px 0;
+        }
+
+        .social-icons a {
+            font-size: 1.5rem;
+            color: #444;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            color: #720707;
+        }
+
+       
+
+        footer a {
+            color: #cf7e78;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .arrow-button {
+            font-size: 1.5rem;
+            color: white;
+            background-color: #990000;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .arrow-button:hover {
+            background-color: #5a0202;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Barra superior -->
+    <div class="container-fluid">
+        <div class="header-bar">
+            <a href="inicio.html" class="arrow">
+                <i class="bi bi-arrow-left"></i>
+            </a>
+            
+        </div>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6 user-info">
+                <i class="bi bi-person-circle user-icon"></i>
+                <h2>Bienvenida Aranza</h2>
+                <p><strong>Nombre:</strong> Aranza</p>
+                <p><strong>Apellido:</strong> Carmona</p>
+                <p><strong>Correo electrónico:</strong> aranza.carmona11@gmail.com</p>
+                <p><strong>Teléfono:</strong> +52 1 234 567 890</p>
+                <p><strong>Dirección:</strong> Calle Emiliano Zapata #173, Yuriria, Guanajuato, México</p>
+                <p><strong>Contraseña:</strong> •••••••••••••</p>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
